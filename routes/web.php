@@ -19,3 +19,8 @@ use App\Http\Controllers\TemplateController;
 // });
 
 Route::get('/', [TemplateController::class, 'index']);
+Route::get('/aboutus', [TemplateController::class, 'aboutUs']);
+Route::get('/blog', [TemplateController::class, 'blog']);
+Route::get('/blogdetails', [TemplateController::class, 'blogDetails']);
+Route::get('/contact', [TemplateController::class, 'contact']);
+Route::get('/team', [TemplateController::class, 'team']);
