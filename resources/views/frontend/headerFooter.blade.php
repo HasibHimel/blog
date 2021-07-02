@@ -33,15 +33,15 @@
                         </div></a>
                         <nav id="primary-nav" class="dropdown cf">
                             <ul class="dropdown menu">
-                                <li><a href="index.html">Home</a></li>
+                                <li><a href="{{route('home')}}">Home</a></li>
 
-                                <li><a href="blog.html">Blog</a></li>
+                                <li><a href="{{route('blog')}}">Blog</a></li>
 
-                                <li><a href="about-us.html">About Us</a></li>
+                                <li class='active'><a href="{{route('aboutUs')}}">About Us</a></li>
 
-                                <li class='active'><a href="team.html">Authors</a></li>
+                                <li><a href="{{route('team')}}">Authors</a></li>
 
-                                <li><a href="contact.html">Contact Us</a></li>
+                                <li><a href="{{route('contact')}}">Contact Us</a></li>
                             </ul>
                         </nav><!-- / #primary-nav -->
                     </div>
@@ -49,118 +49,58 @@
             </div>
         </header>
     </div>
+
+    @yield('aboutUsContent')
+    @yield('blogContent')
+    @yield('blogDetailsContent')
+    @yield('contactContect')
+    @yield('indexContent')
+    @yield('teamContent')
       
-    <section class="banner banner-secondary" id="top" style="background-image: url(img/banner-image-2-1920x300.jpg);">
+    <!-- <section class="banner banner-secondary" id="top" style="background-image: url(img/banner-image-1-1920x300.jpg);">
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
                     <div class="banner-caption">
                         <div class="line-dec"></div>
-                        <h2>Authors</h2>
+                        <h2>About Us</h2>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <main>
-        <section class="popular-places" id="popular">
+    <!--<main>
+         <section class="our-services">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="item popular-item">
-                            <div class="thumb">
-                                <div class="thumb-img">
-                                    <img src="img/team-image-1-646x680.jpg" alt="">
-                                </div>
-                                <div class="text-content">
-                                    <h4>John Doe</h4>
-                                    <span>CEO</span>
-                                </div>
-                                <div class="plus-button">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                    <a href="#"><i class="fa fa-behance"></i></a>
-                                </div>
-                            </div>
+                    <div class="col-md-7">
+                        <div class="left-content">
+                            <br>
+                            <h4>About us</h4>
+                            <p>Aenean hendrerit metus leo, quis viverra purus condimentum nec. Pellentesque a sem semper, lobortis mauris non, varius urna. Quisque sodales purus eu tellus fringilla.<br><br>Mauris sit amet quam congue, pulvinar urna et, congue diam. Suspendisse eu lorem massa. Integer sit amet posuere tellus, id efficitur leo. In hac habitasse platea dictumst. Vel sequi odit similique repudiandae ipsum iste, quidem tenetur id impedit, eaque et, aliquam quod.</p>
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure cupiditate id unde quis ut maxime, accusantium aperiam consectetur saepe delectus ducimus accusamus, ad doloremque ea. Quam, suscipit quidem perspiciatis asperiores, libero cum saepe hic pariatur eos deleniti illum minima minus.</p>
                         </div>
                     </div>
-
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="item popular-item">
-                            <div class="thumb">
-                                <div class="thumb-img">
-                                    <img src="img/team-image-2-646x680.jpg" alt="">
-                                </div>
-                                <div class="text-content">
-                                    <h4>Jane Doe</h4>
-                                    <span>Marketing Manager</span>
-                                </div>
-                                <div class="plus-button">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                    <a href="#"><i class="fa fa-behance"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="item popular-item">
-                            <div class="thumb">
-                                <div class="thumb-img">
-                                    <img src="img/team-image-3-646x680.jpg" alt="">
-                                </div>
-                                <div class="text-content">
-                                    <h4>Paula Jeorge</h4>
-                                    <span>Customer Service</span>
-                                </div>
-                                <div class="plus-button">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                    <a href="#"><i class="fa fa-behance"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="item popular-item">
-                            <div class="thumb">
-                                <div class="thumb-img">
-                                    <img src="img/team-image-4-646x680.jpg" alt="">
-                                </div>
-                                <div class="text-content">
-                                    <h4>Dan Blatan</h4>
-                                    <span>Customer Service</span>
-                                </div>
-                                <div class="plus-button">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                    <a href="#"><i class="fa fa-behance"></i></a>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col-md-5">
+                        <img src="img/about-1-720x480.jpg" class="img-fluid" alt="">
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
-        <section id="video-container">
+        <!-- <section id="video-container">
             <div class="video-overlay"></div>
             <div class="video-content">
                 <div class="inner">
                       <div class="section-heading">
                           <span>Lorem ipsum dolor.</span>
                           <h2>Vivamus nec vehicula felis</h2>
-                      </div>
+                      </div> -->
                       <!-- Modal button -->
 
-                      <div class="container">
+                      <!-- <div class="container">
                         <div class="row">
                             <div class="col-lg-10 col-lg-offset-1">
                                 <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi blanditiis, esse deserunt assumenda! Tempora nulla natus illum soluta quasi, nisi, in quaerat cumque corrupti ipsum impedit necessitatibus expedita minus harum, fuga id aperiam autem architecto odio. Perferendis eius possimus ex itaque tenetur saepe id quis dicta voluptas, corrupti sapiente hic!</p>
@@ -169,20 +109,80 @@
                       </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
-        <section class="popular-places">
-            <div class="container text-center">
-                <h4>Lorem ipsum dolor sit amet, consectetur adipisicing.</h4>
+        <!-- <section class="popular-places" id="popular">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-heading">
+                            <span>Team</span>
+                            <h2>Lorem ipsum dolor sit amet</h2>
+                        </div>
+                    </div> 
+                </div> 
 
-                <br>
-
-                <div class="blue-button">
-                    <a href="contact.html">Contact Us</a>
+                <div class="owl-carousel owl-theme">
+                    <div class="item popular-item">
+                        <div class="thumb">
+                            <div class="thumb-img">
+                                <img src="img/team-image-1-646x680.jpg" alt="">
+                            </div>
+                            <div class="text-content">
+                                <h4>John Doe</h4>
+                                <span>CEO</span>
+                            </div>
+                            <div class="plus-button">
+                                <a href="team.html"><i class="fa fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item popular-item">
+                        <div class="thumb">
+                            <div class="thumb-img">
+                                <img src="img/team-image-2-646x680.jpg" alt="">
+                            </div>
+                            <div class="text-content">
+                                <h4>Jane Doe</h4>
+                                <span>Marketing Manager</span>
+                            </div>
+                            <div class="plus-button">
+                                <a href="team.html"><i class="fa fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item popular-item">
+                        <div class="thumb">
+                            <div class="thumb-img">
+                                <img src="img/team-image-3-646x680.jpg" alt="">
+                            </div>
+                            <div class="text-content">
+                                <h4>Paula Jeorge</h4>
+                                <span>Customer Service</span>
+                            </div>
+                            <div class="plus-button">
+                                <a href="team.html"><i class="fa fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item popular-item">
+                        <div class="thumb">
+                            <div class="thumb-img">
+                                <img src="img/team-image-4-646x680.jpg" alt="">
+                            </div>
+                            <div class="text-content">
+                                <h4>Dan Blatan</h4>
+                                <span>Customer Service</span>
+                            </div>
+                            <div class="plus-button">
+                                <a href="team.html"><i class="fa fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-    </main>
+    </main> -->
 
     <footer>
         <div class="container">
@@ -210,10 +210,10 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <ul>
-                                    <li><a href="inde.html"><i class="fa fa-stop"></i>Home</a></li>
-                                    <li><a href="about.html"><i class="fa fa-stop"></i>About</a></li>
-                                    <li><a href="team.html"><i class="fa fa-stop"></i>Team</a></li>
-                                    <li><a href="contact.html"><i class="fa fa-stop"></i>Contact Us</a></li>
+                                    <li><a href="{{route('home')}}"><i class="fa fa-stop"></i>Home</a></li>
+                                    <li><a href="{{route('aboutUs')}}"><i class="fa fa-stop"></i>About</a></li>
+                                    <li><a href="{{route('team')}}"><i class="fa fa-stop"></i>Team</a></li>
+                                    <li><a href="{{route('contact')}}"><i class="fa fa-stop"></i>Contact Us</a></li>
                                 </ul>
                             </div>
                             <div class="col-md-6">

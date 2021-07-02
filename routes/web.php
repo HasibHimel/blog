@@ -18,9 +18,9 @@ use App\Http\Controllers\TemplateController;
 //     return view('welcome');
 // });
 
-Route::get('/', [TemplateController::class, 'index']);
-Route::get('/aboutus', [TemplateController::class, 'aboutUs']);
-Route::get('/blog', [TemplateController::class, 'blog']);
-Route::get('/blogdetails', [TemplateController::class, 'blogDetails']);
-Route::get('/contact', [TemplateController::class, 'contact']);
-Route::get('/team', [TemplateController::class, 'team']);
+Route::get('/', [TemplateController::class, 'index'])->name('home');
+Route::get('/aboutus', [TemplateController::class, 'aboutUs'])->name('aboutUs');
+Route::get('/blog', [TemplateController::class, 'blog'])->name('blog');
+Route::get('/blogdetails', [TemplateController::class, 'blogDetails'])->name('blogDetais');
+Route::get('/contact', [TemplateController::class, 'contact'])->name('contact');
+Route::get('/team', [TemplateController::class, 'team'])->name('team');
