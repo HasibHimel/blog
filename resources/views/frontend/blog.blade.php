@@ -26,23 +26,23 @@
                                 <div class="featured-item">
                                     <div class="thumb">
                                         <div class="thumb-img">
-                                            <img src="img/blog-1-720x480.jpg" alt="">
+                                            <img src="{{asset('img')}}/{{$post->image_name}}" alt="">
                                         </div>
 
                                         <div class="overlay-content">
-                                         <strong title="Author"><i class="fa fa-user"></i> John Doe</strong> &nbsp;&nbsp;&nbsp;&nbsp;
-                                         <strong title="Posted on"><i class="fa fa-calendar"></i> 12/06/2020 10:30</strong> &nbsp;&nbsp;&nbsp;&nbsp;
-                                         <strong title="Views"><i class="fa fa-map-marker"></i> 115</strong>
+                                         <strong title="Author"><i class="fa fa-user"></i> {{$post->user->name}}</strong> &nbsp;&nbsp;&nbsp;&nbsp;
+                                         <strong title="Posted on"><i class="fa fa-calendar"></i> {{$post->created_at}}</strong> &nbsp;&nbsp;&nbsp;&nbsp;
+                                         <strong title="Views"><i class="fa fa-map-marker"></i> {{$post->view}}</strong>
                                         </div>
                                     </div>
 
                                     <div class="down-content">
                                         <h4>{{$post->title}}</h4>
 
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim consectetur assumenda nam facere voluptatibus totam veritatis. </p>
+                                        <p>{{$post->content}}</p>
 
                                         <div class="text-button">
-                                            <a href="blog-details.html">Read More</a>
+                                            <a href="{{route('blogDetails', ['post_id'=>$post->id])}}">Read More</a>
                                         </div>
                                     </div>
                                 </div>

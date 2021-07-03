@@ -58,7 +58,7 @@
                         <div class="featured-item">
                             <div class="thumb">
                                 <div class="thumb-img">
-                                    <img src="img/blog-1-720x480.jpg" alt="">
+                                    <img src="{{asset('img')}}/{{$post->image_name}}" alt="">
                                 </div>
 
                                 <div class="overlay-content">
