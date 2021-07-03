@@ -2,13 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class TemplateController extends Controller
 {
     //
     public function index(){
-        return view('frontend.index');
+        $posts=Post::join('users', 'users.id', '=', 'posts.user_id')
+        ->select('users.*', 'posts.*')
+        ->orderBy('posts.created_at', 'desc')
+        ->take(3)
+        ->get();
+        return view('frontend.index', ['posts' => $posts]);
+        
     }
 
     public function aboutUs(){
