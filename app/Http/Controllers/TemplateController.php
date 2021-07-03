@@ -27,8 +27,9 @@ class TemplateController extends Controller
         return view('frontend.blog');
     }
 
-    public function blogDetails(){
-        return view('frontend.blogDetails');
+    public function blogDetails($id){
+        $post=Post::where('id',$id)->get();
+        return view('frontend.blogDetails',['post'=>$post]);
     }
 
     public function contact(){

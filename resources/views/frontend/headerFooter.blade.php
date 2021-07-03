@@ -8,16 +8,16 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" href="css/fontAwesome.css">
-        <link rel="stylesheet" href="css/hero-slider.css">
-        <link rel="stylesheet" href="css/owl-carousel.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{asset('css/bootstrap-theme.min.css')}}">
+        <link rel="stylesheet" href="{{asset('css/fontAwesome.css')}}">
+        <link rel="stylesheet" href="{{asset('css/hero-slider.css')}}">
+        <link rel="stylesheet" href="{{asset('css/owl-carousel.css')}}">
+        <link rel="stylesheet" href="{{asset('css/style.css')}}">
 
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+        <link href="{{asset('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900')}}" rel="stylesheet">
 
-        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="{{asset('js/vendor/modernizr-2.8.3-respond-1.4.2.min.js')}}"></script>
     </head>
 
 <body>
@@ -29,7 +29,7 @@
                     <div class="col-md-12">
                         <button id="primary-nav-button" type="button">Menu</button>
                         <a href="index.html"><div class="logo">
-                            <img src="img/logo.png" alt="Venue Logo">
+                            <img src="{{asset('img/logo.png')}}" alt="Venue Logo">
                         </div></a>
                         <nav id="primary-nav" class="dropdown cf">
                             <ul class="dropdown menu">
@@ -193,7 +193,7 @@
                 <div class="col-md-5">
                     <div class="about-veno">
                         <div class="logo">
-                            <img src="img/footer_logo.png" alt="Venue Logo">
+                            <img src="{{asset('img/footer_logo.png')}}" alt="Venue Logo">
                         </div>
                         <p>Mauris sit amet quam congue, pulvinar urna et, congue diam. Suspendisse eu lorem massa. Integer sit amet posuere tellustea dictumst.</p>
                         <ul class="social-icons">
@@ -250,13 +250,13 @@
         <p>Copyright © 2020 Company Name - Template by: <a href="https://www.phpjabbers.com/">PHPJabbers.com</a></p>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js" type="text/javascript"></script>
-    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+    <script src="{{asset('https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js')}}" type="text/javascript"></script>
+    <script>window.jQuery || document.write('<script src="{{asset(`js/vendor/jquery-1.11.2.min.js`)}}"><\/script>')</script>
 
-    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="{{asset('js/vendor/bootstrap.min.js')}}"></script>
     
-    <script src="js/datepicker.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    <script src="{{asset('js/datepicker.js')}}"></script>
+    <script src="{{asset('js/plugins.js')}}"></script>
+    <script src="{{asset('js/main.js')}}"></script>
 </body>
 </html>

@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Auth;
 Route::get('/', [TemplateController::class, 'index'])->name('home')->middleware('auth');
 Route::get('/aboutus', [TemplateController::class, 'aboutUs'])->name('aboutUs')->middleware('auth');
 Route::get('/blog', [TemplateController::class, 'blog'])->name('blog')->middleware('auth');
-Route::get('/blogdetails', [TemplateController::class, 'blogDetails'])->name('blogDetais')->middleware('auth');
+Route::get('/blogdetails/{post_id}', [TemplateController::class, 'blogDetails'])->name('blogDetails')->middleware('auth');
 Route::get('/contact', [TemplateController::class, 'contact'])->name('contact')->middleware('auth');
 Route::get('/team', [TemplateController::class, 'team'])->name('team')->middleware('auth');
 

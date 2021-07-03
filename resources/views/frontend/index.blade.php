@@ -74,7 +74,7 @@
                                 <p>{{$post->content}}</p>
 
                                 <div class="text-button">
-                                    <a href="blog-details.html">Read More</a>
+                                    <a href="{{route('blogDetails',['post_id'=>$post->id])}}">Read More</a>
                                 </div>
                             </div>
                         </div>

@@ -2,13 +2,13 @@
 
 @section('blogDetailsContent')
 
-<section class="banner banner-secondary" id="top" style="background-image: url(img/banner-image-1-1920x300.jpg);">
+<section class="banner banner-secondary" id="top">
         <div class="container">
             <div class="row">
                 <div class="col-md-10 col-md-offset-1">
                     <div class="banner-caption">
                         <div class="line-dec"></div>
-                        <h2>LOREM IPSUM DOLOR SIT AMET, CONSECTETUR ADIPISICING</h2>
+                        <h2>{{$post[0]->title}}</h2>
 
                         <h4><i class="fa fa-user"></i>John Doe  &nbsp;&nbsp;&nbsp;&nbsp;  <i class="fa fa-calendar"></i> 12/06/2020 10:30   &nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-eye"></i> 114</h4>
                     </div>
@@ -21,7 +21,7 @@
         <section class="featured-places">
             <div class="container">
                 <div class="form-group">
-                    <img src="img/blog-image-fullscren-1-1920x700.jpg" class="img-responsive" alt="">
+                    <img src="{{('img/blog-image-fullscren-1-1920x700.jpg')}}" class="img-responsive" alt="">
                 </div>
 
                 <br>
@@ -91,5 +91,4 @@
             </div>
         </section>
     </main>
-
 @endsection
