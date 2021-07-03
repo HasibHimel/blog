@@ -24,7 +24,12 @@ class TemplateController extends Controller
     }
 
     public function blog(){
-        return view('frontend.blog');
+        $posts=Post::join('users', 'users.id', '=', 'posts.user_id')
+        ->select('users.*', 'posts.*')
+        ->orderBy('posts.created_at', 'desc')
+        ->paginate(4);
+
+        return view('frontend.blog', ['posts'=>$posts]);
     }
 
     public function blogDetails($id){

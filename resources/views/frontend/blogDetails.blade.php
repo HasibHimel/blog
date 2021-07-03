@@ -10,7 +10,7 @@
                         <div class="line-dec"></div>
                         <h2>{{$post[0]->title}}</h2>
 
-                        <h4><i class="fa fa-user"></i>John Doe  &nbsp;&nbsp;&nbsp;&nbsp;  <i class="fa fa-calendar"></i> 12/06/2020 10:30   &nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-eye"></i> 114</h4>
+                        <h4><i class="fa fa-user"></i>{{$post[0]->user->name}} &nbsp;&nbsp;&nbsp;&nbsp;  <i class="fa fa-calendar"></i> {{$post[0]->created_at}}   &nbsp;&nbsp;&nbsp;&nbsp; <i class="fa fa-eye"></i> {{$post[0]->view}}</h4>
                     </div>
                 </div>
             </div>
@@ -26,17 +26,17 @@
 
                 <br>
 
-                <h2>Lorem ipsum dolor sit amet, consectetur adipisicing.</h2>
+                <h2>{{$post[0]->title}}</h2>
                 
-                <p>Aenean hendrerit metus leo, quis viverra purus condimentum nec. Pellentesque a sem semper, lobortis mauris non, varius urna. Quisque sodales purus eu tellus fringilla.<br><br>Mauris sit amet quam congue, pulvinar urna et, congue diam. Suspendisse eu lorem massa. Integer sit amet posuere tellus, id efficitur leo. In hac habitasse platea dictumst. Vel sequi odit similique repudiandae ipsum iste, quidem tenetur id impedit, eaque et, aliquam quod.</p>
+                <p>{{$post[0]->content}}</p>
 
                 <br>
                 
-                <h4>Lorem ipsum dolor sit amet.</h4>
+                <!-- <h4>Lorem ipsum dolor sit amet.</h4>
                 
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, id quia maxime quas, unde sunt quaerat non! Sapiente aperiam, voluptatum voluptas recusandae qui veniam numquam voluptate ipsa earum quia dicta? Non praesentium quod vel ratione rerum dolor animi eligendi nisi, dolores culpa atque, deserunt veritatis incidunt quibusdam cumque obcaecati sit.</p>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas unde tenetur dolorem eos esse, voluptatum iste iure voluptas dolor quo sit beatae. Odio laudantium eligendi ipsa pariatur eveniet doloremque quis voluptas veritatis repellendus laborum aspernatur sapiente mollitia totam fugit quod saepe earum, iste voluptatibus, aut aperiam iure omnis! Id libero quibusdam nisi fugiat, optio necessitatibus vitae magni incidunt ea tenetur?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas unde tenetur dolorem eos esse, voluptatum iste iure voluptas dolor quo sit beatae. Odio laudantium eligendi ipsa pariatur eveniet doloremque quis voluptas veritatis repellendus laborum aspernatur sapiente mollitia totam fugit quod saepe earum, iste voluptatibus, aut aperiam iure omnis! Id libero quibusdam nisi fugiat, optio necessitatibus vitae magni incidunt ea tenetur?</p> -->
 
                 <br>
                 <br>

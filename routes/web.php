@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CreatePostController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TemplateController;
 use App\Http\Controllers\HomeController;
@@ -26,6 +27,7 @@ Route::get('/blog', [TemplateController::class, 'blog'])->name('blog')->middlewa
 Route::get('/blogdetails/{post_id}', [TemplateController::class, 'blogDetails'])->name('blogDetails')->middleware('auth');
 Route::get('/contact', [TemplateController::class, 'contact'])->name('contact')->middleware('auth');
 Route::get('/team', [TemplateController::class, 'team'])->name('team')->middleware('auth');
+
 
 Auth::routes();
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');

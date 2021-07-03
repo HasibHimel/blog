@@ -21,6 +21,7 @@
                 <div class="row">
                     <div class="col-lg-9 col-md-8 col-xs-12">
                         <div class="row">
+                            @foreach($posts as $post)
                             <div class="col-sm-6 col-xs-12">
                                 <div class="featured-item">
                                     <div class="thumb">
@@ -36,7 +37,7 @@
                                     </div>
 
                                     <div class="down-content">
-                                        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit hic</h4>
+                                        <h4>{{$post->title}}</h4>
 
                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim consectetur assumenda nam facere voluptatibus totam veritatis. </p>
 
@@ -46,137 +47,11 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="col-sm-6 col-xs-12">
-                                <div class="featured-item">
-                                    <div class="thumb">
-                                        <div class="thumb-img">
-                                            <img src="img/blog-2-720x480.jpg" alt="">
-                                        </div>
-
-                                        <div class="overlay-content">
-                                         <strong title="Author"><i class="fa fa-user"></i> John Doe</strong> &nbsp;&nbsp;&nbsp;&nbsp;
-                                         <strong title="Posted on"><i class="fa fa-calendar"></i> 12/06/2020 10:30</strong> &nbsp;&nbsp;&nbsp;&nbsp;
-                                         <strong title="Views"><i class="fa fa-map-marker"></i> 115</strong>
-                                        </div>
-                                    </div>
-
-                                    <div class="down-content">
-                                        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit hic</h4>
-
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim consectetur assumenda nam facere voluptatibus totam veritatis. </p>
-
-                                        <div class="text-button">
-                                            <a href="blog-details.html">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 col-xs-12">
-                                <div class="featured-item">
-                                    <div class="thumb">
-                                        <div class="thumb-img">
-                                            <img src="img/blog-3-720x480.jpg" alt="">
-                                        </div>
-
-                                        <div class="overlay-content">
-                                         <strong title="Author"><i class="fa fa-user"></i> John Doe</strong> &nbsp;&nbsp;&nbsp;&nbsp;
-                                         <strong title="Posted on"><i class="fa fa-calendar"></i> 12/06/2020 10:30</strong> &nbsp;&nbsp;&nbsp;&nbsp;
-                                         <strong title="Views"><i class="fa fa-map-marker"></i> 115</strong>
-                                        </div>
-                                    </div>
-
-                                    <div class="down-content">
-                                        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit hic</h4>
-
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim consectetur assumenda nam facere voluptatibus totam veritatis. </p>
-
-                                        <div class="text-button">
-                                            <a href="blog-details.html">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 col-xs-12">
-                                <div class="featured-item">
-                                    <div class="thumb">
-                                        <div class="thumb-img">
-                                            <img src="img/blog-4-720x480.jpg" alt="">
-                                        </div>
-
-                                        <div class="overlay-content">
-                                         <strong title="Author"><i class="fa fa-user"></i> John Doe</strong> &nbsp;&nbsp;&nbsp;&nbsp;
-                                         <strong title="Posted on"><i class="fa fa-calendar"></i> 12/06/2020 10:30</strong> &nbsp;&nbsp;&nbsp;&nbsp;
-                                         <strong title="Views"><i class="fa fa-map-marker"></i> 115</strong>
-                                        </div>
-                                    </div>
-
-                                    <div class="down-content">
-                                        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit hic</h4>
-
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim consectetur assumenda nam facere voluptatibus totam veritatis. </p>
-
-                                        <div class="text-button">
-                                            <a href="blog-details.html">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 col-xs-12">
-                                <div class="featured-item">
-                                    <div class="thumb">
-                                        <div class="thumb-img">
-                                            <img src="img/blog-5-720x480.jpg" alt="">
-                                        </div>
-
-                                        <div class="overlay-content">
-                                         <strong title="Author"><i class="fa fa-user"></i> John Doe</strong> &nbsp;&nbsp;&nbsp;&nbsp;
-                                         <strong title="Posted on"><i class="fa fa-calendar"></i> 12/06/2020 10:30</strong> &nbsp;&nbsp;&nbsp;&nbsp;
-                                         <strong title="Views"><i class="fa fa-map-marker"></i> 115</strong>
-                                        </div>
-                                    </div>
-
-                                    <div class="down-content">
-                                        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit hic</h4>
-
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim consectetur assumenda nam facere voluptatibus totam veritatis. </p>
-
-                                        <div class="text-button">
-                                            <a href="blog-details.html">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 col-xs-12">
-                                <div class="featured-item">
-                                    <div class="thumb">
-                                        <div class="thumb-img">
-                                            <img src="img/blog-6-720x480.jpg" alt="">
-                                        </div>
-
-                                        <div class="overlay-content">
-                                         <strong title="Author"><i class="fa fa-user"></i> John Doe</strong> &nbsp;&nbsp;&nbsp;&nbsp;
-                                         <strong title="Posted on"><i class="fa fa-calendar"></i> 12/06/2020 10:30</strong> &nbsp;&nbsp;&nbsp;&nbsp;
-                                         <strong title="Views"><i class="fa fa-map-marker"></i> 115</strong>
-                                        </div>
-                                    </div>
-
-                                    <div class="down-content">
-                                        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit hic</h4>
-
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim consectetur assumenda nam facere voluptatibus totam veritatis. </p>
-
-                                        <div class="text-button">
-                                            <a href="blog-details.html">Read More</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach         
                         </div>
+                        
+                        <div class="text-center"> {{ $posts->links("pagination::bootstrap-4") }}</div>
+                       
                     </div>
 
                     <div class="col-lg-3 col-md-4 col-xs-12">
