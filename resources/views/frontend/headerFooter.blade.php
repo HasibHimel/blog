@@ -42,9 +42,11 @@
                                 <li><a href="{{route('team')}}">Authors</a></li>
 
                                 <li><a href="{{route('contact')}}">Contact Us</a></li>
-
+                                @if(Auth::user()->isAdmin == 0)
                                 <li><a href="{{route('dashboard')}}">Dashboard</a></li>
-
+                                @else
+                                <li><a href="{{route('admin.home')}}">Dashboard</a></li>
+                                @endif
                             </ul>
                         </nav><!-- / #primary-nav -->
                     </div>

@@ -27,7 +27,7 @@ Route::get('/blog', [TemplateController::class, 'blog'])->name('blog')->middlewa
 Route::get('/blogdetails/{post_id}', [TemplateController::class, 'blogDetails'])->name('blogDetails')->middleware('auth');
 Route::get('/contact', [TemplateController::class, 'contact'])->name('contact')->middleware('auth');
 Route::get('/team', [TemplateController::class, 'team'])->name('team')->middleware('auth');
-
+Route::post('/store-form', [PostController::class, 'store']);
 
 Auth::routes();
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
