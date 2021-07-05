@@ -94,7 +94,7 @@
                         Add Blog Post 
                     </div>
                     <div class="card-body">
-                        <form name="add-blog-post-form" id="add-blog-post-form" method="post" action="{{url('store-form')}}">
+                        <form enctype="multipart/form-data" name="add-blog-post-form" id="add-blog-post-form" method="post" action="{{url('store-form')}}">
                             @csrf
 
                             <div class="form-group">
@@ -105,6 +105,10 @@
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Description</label>
                                 <textarea name="description" class="form-control" required=""></textarea>
+                            </div>
+                            <div class="form-group">
+                            <label for="exampleInputEmail1">Photo</label>
+                            <input type="file" name="image" class="form-control" required>
                             </div>
 
                             <button type="submit" class="btn btn-primary">Submit</button>
