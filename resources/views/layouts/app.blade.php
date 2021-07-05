@@ -95,7 +95,7 @@
                         Laravel 8 - Add Blog Post Form Example
                     </div>
                     <div class="card-body">
-                        <form enctype="multipart/form-data"  name="add-blog-post-form" id="add-blog-post-form" method="post" action="{{route('store     ')}}">
+                        <form enctype="multipart/form-data"  name="add-blog-post-form" id="add-blog-post-form" method="post" action="{{route('store')}}">
                             @csrf
 
                             <div class="form-group">

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Comment;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -34,7 +35,15 @@ class TemplateController extends Controller
 
     public function blogDetails($id){
         $post=Post::where('id',$id)->get();
-        return view('frontend.blogDetails',['post'=>$post]);
+
+        $comments=Comment::where('post_id',$id)
+        ->join('users', 'users.id', '=', 'comments.user_id')
+        ->join('posts', 'posts.id', '=', 'comments.post_id')
+        ->select('users.*', 'posts.*', 'comments.*')
+        ->orderBy('comments.created_at', 'desc')
+        ->paginate(4);
+
+        return view('frontend.blogDetails',['post'=>$post, 'comments'=>$comments]);
     }
 
     public function contact(){
