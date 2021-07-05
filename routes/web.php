@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TemplateController;
@@ -27,7 +28,8 @@ Route::get('/blog', [TemplateController::class, 'blog'])->name('blog')->middlewa
 Route::get('/blogdetails/{post_id}', [TemplateController::class, 'blogDetails'])->name('blogDetails')->middleware('auth');
 Route::get('/contact', [TemplateController::class, 'contact'])->name('contact')->middleware('auth');
 Route::get('/team', [TemplateController::class, 'team'])->name('team')->middleware('auth');
-Route::post('/store-form', [PostController::class, 'store']);
+Route::post('/store-form', [PostController::class, 'store'])->name('store')->middleware('auth');
+Route::post('/post-comment/{post_id}', [CommentController::class, 'create_comment'])->name('postComment')->middleware('auth');
 
 Auth::routes();
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');

@@ -46,26 +46,17 @@
 
                 <div class="row">
                     <div class="col-md-8">
-                        <form id="contact" action="" method="post">
+                        <form id="contact" action="{{route('postComment', ['post_id'=>$post[0]->id])}}" method="post">
+                            @csrf
                             <div class="row">
                               <div class="col-lg-12 col-md-12 col-sm-12">
                                 <fieldset>
-                                  <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" required="">
-                                </fieldset>
-                              </div>
-                              <div class="col-lg-12 col-md-12 col-sm-12">
-                                <fieldset>
-                                  <input name="email" type="text" class="form-control" id="email" placeholder="E-Mail Address" required="">
-                                </fieldset>
-                              </div>
-                              <div class="col-lg-12">
-                                <fieldset>
-                                  <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Message" required=""></textarea>
+                                  <input name="comment" type="text" class="form-control" id="name" placeholder="Full Name" required="">
                                 </fieldset>
                               </div>
                               <div class="col-lg-12">
                                 <div class="blue-button">
-                                    <a href="#">Submit</a>
+                                <button type="submit" class="btn btn-primary">Submit</button>
                                 </div>
                               </div>
                             </div>
