@@ -36,6 +36,11 @@ class HomeController extends Controller
 
     public function adminIndex()
     {
-        return view('admin.adminHome');
+        $myposts = Post::where('user_id', Auth::id())
+        ->join('users', 'users.id', '=', 'posts.user_id')
+        ->select('users.*', 'posts.*')
+        ->orderBy('posts.created_at', 'desc')
+        ->paginate(4);
+        return view('admin.adminHome', ['myposts'=>$myposts]);
     }
 }
