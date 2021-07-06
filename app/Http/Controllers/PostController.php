@@ -20,7 +20,6 @@ class PostController extends Controller
     public function get_a_post_by_id(Request $request)
     {
         $post = Post::where('id', $request->post_id)->first();
-        //dd($post->id);
         return view('frontend.editPost', compact('post'));
     }
 
