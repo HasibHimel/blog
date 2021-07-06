@@ -42,6 +42,7 @@ class TemplateController extends Controller
         ->select('users.*', 'posts.*', 'comments.*')
         ->orderBy('comments.created_at', 'desc')
         ->paginate(4);
+        
 
         return view('frontend.blogDetails',['post'=>$post, 'comments'=>$comments]);
     }

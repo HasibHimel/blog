@@ -30,6 +30,9 @@ Route::get('/contact', [TemplateController::class, 'contact'])->name('contact')-
 Route::get('/team', [TemplateController::class, 'team'])->name('team')->middleware('auth');
 Route::post('/store-form', [PostController::class, 'store'])->name('store')->middleware('auth');
 Route::post('/post-comment/{post_id}', [CommentController::class, 'create_comment'])->name('postComment')->middleware('auth');
+Route::get('/edit-post/{post_id}', [PostController::class, 'get_a_post_by_id'])->name('editPost')->middleware('auth');
+Route::post('/edit-post-submit/{post_id}', [PostController::class, 'update'])->name('editPostSubmit')->middleware('auth');
+
 
 Auth::routes();
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');

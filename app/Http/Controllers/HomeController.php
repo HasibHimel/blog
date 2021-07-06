@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -23,7 +25,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+
+        $myposts = Post::where('user_id', Auth::id())
+        ->join('users', 'users.id', '=', 'posts.user_id')
+        ->select('users.*', 'posts.*')
+        ->orderBy('posts.created_at', 'desc')
+        ->paginate(4);
+        return view('home', ['myposts'=>$myposts]);
     }
 
     public function adminIndex()
