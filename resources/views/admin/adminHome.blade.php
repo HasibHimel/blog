@@ -18,11 +18,18 @@
                 </div>
             </div>
         </div>
+        <div>
+            <button style="margin-left: 230px;" type="button" class="btn btn-primary">
+            <a style="color: azure; text-decoration: none" href="{{route('admin.control.index')}}"> Cotrol Pannel</a></button>
+        </div>
     </div>
+    <br>
     <div class="card">
+
         <div class="card-header text-center font-weight-bold">
             Add Blog Post
         </div>
+
         <div class="card-body">
             <form enctype="multipart/form-data" name="add-blog-post-form" id="add-blog-post-form" method="post" action="{{route('store')}}">
                 @csrf

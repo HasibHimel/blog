@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminControlController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
@@ -32,8 +33,8 @@ Route::post('/store-form', [PostController::class, 'store'])->name('store')->mid
 Route::post('/post-comment/{post_id}', [CommentController::class, 'create_comment'])->name('postComment')->middleware('auth');
 Route::get('/edit-post/{post_id}', [PostController::class, 'get_a_post_by_id'])->name('editPost')->middleware('auth');
 Route::post('/edit-post-submit/{post_id}', [PostController::class, 'update'])->name('editPostSubmit')->middleware('auth');
-Route::get('/delete/{post_id}', [PostController::class, 'delete'])->name('deletePost')->middleware('isAdmin');
-
+Route::get('/delete/{post_id}', [PostController::class, 'delete'])->name('deletePost')->middleware('auth');
+Route::get('/admin-control', [AdminControlController::class, 'index'])->name('admin.control.index')->middleware('isAdmin');
 
 Auth::routes();
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
