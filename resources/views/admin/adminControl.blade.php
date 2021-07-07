@@ -11,4 +11,23 @@
             </div>
             @endif
         </div>
-@endsection
+       
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+                @foreach($users as $user)
+                <li class="list-group-item">
+                    <span class="badge">
+                        <h4>
+                            <strong>
+                                <font size="+1" style="color: blue">{{$user->name}}</font>
+                        </h4>
+                        </strong>
+                      
+                </li>
+                @endforeach
+            </ul>
+
+        </div>
+    </div>
+    @endsection

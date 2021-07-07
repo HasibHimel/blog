@@ -20,7 +20,7 @@
         </div>
         <div>
             <button style="margin-left: 230px;" type="button" class="btn btn-primary">
-            <a style="color: azure; text-decoration: none" href="{{route('admin.control.index')}}"> Cotrol Pannel</a></button>
+                <a style="color: azure; text-decoration: none" href="{{route('admin.control.index')}}"> Cotrol Pannel</a></button>
         </div>
     </div>
     <br>
@@ -64,10 +64,10 @@
                 @foreach($myposts as $mypost)
                 <li class="list-group-item">
                     <span class="badge">
-
-                        <strong>
-                            <font size="+1" style="color: blue">{{$mypost->user->name}}</font>
-                            </h4>
+                        <h4>
+                            <strong>
+                                <font size="+1" style="color: blue">{{$mypost->user->name}}</font>
+                        </h4>
                         </strong>
                         &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
                         {{$mypost->created_at}}
