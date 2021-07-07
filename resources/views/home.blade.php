@@ -73,7 +73,7 @@
                     <a style="margin-left: 900px" href="{{route('editPost', ['post_id'=>$mypost->id])}}">
                         <font size="-1" style="color: blue">Edit</font>
                     </a>
-                    <a href="{{route('editPost', ['post_id'=>$mypost->id])}}">
+                    <a href="{{route('deletePost', ['post_id'=>$mypost->id])}}" onclick="return confirm('Are you sure?')">
                         <font size="-1" style="color: red">Delete</font>
                     </a>
                 </li>

@@ -20,7 +20,7 @@ class IsAdmin
             return $next($request);
         }
 
-        return redirect(route('home'))->with('error', 'restricted');
+        return redirect(route('dashboard'))->with('error', 'restricted');
         
     }
 }

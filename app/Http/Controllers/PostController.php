@@ -85,7 +85,7 @@ class PostController extends Controller
         $updatePost->updated_at = Carbon::now()->toDateTimeString();
         $updatePost->save();
 
-        return redirect()->route('dashboard')
+        return redirect()->route('admin.home')
             ->with('success', 'Product updated successfully');
     }
 
