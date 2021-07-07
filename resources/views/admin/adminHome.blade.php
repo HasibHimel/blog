@@ -63,14 +63,16 @@
       <ul class="list-group">
         @foreach($myposts as $mypost)
         <li class="list-group-item">
-          <span class="badge">
+        <span class="badge">
+
             <h4>
               <strong>
-                <font size="+1" style="color: blue">{{$mypost->user->name}}</font>
-            </h4>
+              <font size="+1" style="color: blue">{{$mypost->user->name}}&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</font>
             </strong>
-            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
-            {{$mypost->created_at}}
+            
+            <font size="-1" style="color: black">{{$mypost->created_at}} </font>
+            </h4>
+           
           </span>
           <h4>
             <strong>{{$mypost->title}}</strong>

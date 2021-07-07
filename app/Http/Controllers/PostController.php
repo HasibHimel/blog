@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Post;
+use App\Models\User;
 use Carbon\Carbon;
 use Illuminate\Foundation\Console\UpCommand;
 use Illuminate\Support\Facades\Auth;
@@ -48,7 +49,8 @@ class PostController extends Controller
         $post->content = $request->description;
         $post->user_id = Auth::id();
         $post->view = 125;
-        $post->approval = 1;
+        $post->approval = 0;
+        $post->is_deleted = 0;
         $post->image_name = $imageName;
         $post->save();
         return redirect()->route('home')->with('status', 'Blog Post Form Data Has Been inserted');
@@ -92,10 +94,22 @@ class PostController extends Controller
     public function delete(Request $request)
     {
         $deleteablePost = Post::where('id', $request->post_id)->first();
+        $user = User::where('id', $deleteablePost->user_id)->first();
         $deleteablePost->is_deleted = 1;
         $deleteablePost->save();
 
-        return redirect()->route('admin.home')
+
+        if($user->isAdmin == 0)
+        {
+            return redirect()->route('admin.control.index')
             ->with('success', 'Product deleted successfully');
+        }
+        else
+        {
+            return redirect()->route('admin.home')
+            ->with('success', 'Product deleted successfully');
+        }
+
+        
     }
 }

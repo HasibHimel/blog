@@ -11,7 +11,10 @@ class TemplateController extends Controller
 {
     //
     public function index(){
-        $posts=Post::where('is_deleted', 0)
+        $posts=Post::where([
+            ['approval','=', 1],
+            ['is_deleted', '=', 0]
+            ])
         ->join('users', 'users.id', '=', 'posts.user_id')
         ->select('users.*', 'posts.*')
         ->orderBy('posts.created_at', 'desc')
@@ -26,7 +29,10 @@ class TemplateController extends Controller
     }
 
     public function blog(){
-        $posts=Post::where('is_deleted', 0)
+        $posts=Post::where([
+            ['approval', 1],
+            ['is_deleted', 0]
+            ])
         ->join('users', 'users.id', '=', 'posts.user_id')
         ->select('users.*', 'posts.*')
         ->orderBy('posts.created_at', 'desc')
