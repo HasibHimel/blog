@@ -35,6 +35,8 @@ Route::get('/edit-post/{post_id}', [PostController::class, 'get_a_post_by_id'])-
 Route::post('/edit-post-submit/{post_id}', [PostController::class, 'update'])->name('editPostSubmit')->middleware('auth');
 Route::get('/delete/{post_id}', [PostController::class, 'delete'])->name('deletePost')->middleware('auth');
 Route::get('/admin-control', [AdminControlController::class, 'index'])->name('admin.control.index')->middleware('isAdmin');
+Route::get('/change-status/{user_id}', [AdminControlController::class, 'change'])->name('admin.control.change')->middleware('isAdmin');
+
 
 Auth::routes();
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
