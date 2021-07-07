@@ -9,9 +9,9 @@
 
                 <div class="card-body">
                     @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
+                    <div class="alert alert-success" role="alert">
+                        {{ session('status') }}
+                    </div>
                     @endif
 
                     {{ __('You are logged as admin!') }}
@@ -73,9 +73,12 @@
                     <a style="margin-left: 900px" href="{{route('editPost', ['post_id'=>$mypost->id])}}">
                         <font size="-1" style="color: blue">Edit</font>
                     </a>
-                    <a href="{{route('editPost', ['post_id'=>$mypost->id])}}">
+                    <a href="{{route('deletePost', ['post_id'=>$mypost->id])}}" onclick="return confirm('Are you sure?')">
                         <font size="-1" style="color: red">Delete</font>
                     </a>
+                    <!-- Click <form class="link_mimic" method="post" action="{{route('deletePost', ['post_id'=>$mypost->id])}}">
+                        <input type="submit" value="svgd">
+                    </form>  -->
                 </li>
                 @endforeach
             </ul>

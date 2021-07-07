@@ -56,7 +56,7 @@ class PostController extends Controller
 
     public function update(Request $request)
     {
-        $UpdatePost = Post::where('id', $request->post_id)->first();
+        $updatePost = Post::where('id', $request->post_id)->first();
 
         $imageName = null;
   
@@ -77,15 +77,25 @@ class PostController extends Controller
         }
 
         
-        $UpdatePost->title = $request->title;
-        $UpdatePost->content = $request->description;
-        $UpdatePost->approval = 1;
-        $UpdatePost->image_name = $imageName;
-        $UpdatePost->created_at = $UpdatePost->created_at;
-        $UpdatePost->updated_at = Carbon::now()->toDateTimeString();
-        $UpdatePost->save();
+        $updatePost->title = $request->title;
+        $updatePost->content = $request->description;
+        $updatePost->approval = 1;
+        $updatePost->image_name = $imageName;
+        $updatePost->created_at = $updatePost->created_at;
+        $updatePost->updated_at = Carbon::now()->toDateTimeString();
+        $updatePost->save();
 
         return redirect()->route('dashboard')
             ->with('success', 'Product updated successfully');
+    }
+
+    public function delete(Request $request)
+    {
+        $deleteablePost = Post::where('id', $request->post_id)->first();
+        $deleteablePost->is_deleted = 1;
+        $deleteablePost->save();
+
+        return redirect()->route('admin.home')
+            ->with('success', 'Product deleted successfully');
     }
 }
