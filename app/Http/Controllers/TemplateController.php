@@ -11,7 +11,8 @@ class TemplateController extends Controller
 {
     //
     public function index(){
-        $posts=Post::join('users', 'users.id', '=', 'posts.user_id')
+        $posts=Post::where('is_deleted', 0)
+        ->join('users', 'users.id', '=', 'posts.user_id')
         ->select('users.*', 'posts.*')
         ->orderBy('posts.created_at', 'desc')
         ->take(3)
@@ -25,7 +26,8 @@ class TemplateController extends Controller
     }
 
     public function blog(){
-        $posts=Post::join('users', 'users.id', '=', 'posts.user_id')
+        $posts=Post::where('is_deleted', 0)
+        ->join('users', 'users.id', '=', 'posts.user_id')
         ->select('users.*', 'posts.*')
         ->orderBy('posts.created_at', 'desc')
         ->paginate(4);
