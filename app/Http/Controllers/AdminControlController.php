@@ -5,13 +5,24 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class AdminControlController extends Controller
 {
     //
     public function index()
     {
-        $users=User::get();
+        $currentUser = User::where('id', Auth::id())->first();
+
+        if($currentUser->isSuperAdmin == 1)
+        {
+            $users=User::get();
+        }
+        else
+        {
+            $users=User::where('isAdmin', 0)->get();
+        }
+    
         $unApprovedPosts=Post::where([
             ['approval', '=', 0],
             ['is_deleted', '=', 0]])
