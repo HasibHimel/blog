@@ -16,12 +16,13 @@ class AdminControlController extends Controller
 
         if($currentUser->isSuperAdmin == 1)
         {
-            $users=User::get();
+            $users=User::whereNull('isSuperAdmin')->get();
         }
         else
         {
-            $users=User::where('isAdmin', 0)->get();
+            $users=User::where('isAdmin', '=', 0)->get();
         }
+        // dd($users);
     
         $unApprovedPosts=Post::where([
             ['approval', '=', 0],
