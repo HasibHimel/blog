@@ -18,8 +18,11 @@
     <main>
         <section class="featured-places">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-9 col-md-8 col-xs-12">
+                <div class="row" >
+                    <div id="app">
+                    <post-thumbnail-component></post-thumbnail-component>
+                    </div>
+                    <!-- <div class="col-lg-9 col-md-8 col-xs-12">
                         <div class="row">
                             @foreach($posts as $post)
                             <div class="col-sm-6 col-xs-12">
@@ -52,7 +55,7 @@
                         
                         <div class="text-center"> {{ $posts->links("pagination::bootstrap-4") }}</div>
                        
-                    </div>
+                    </div> -->
 
                     <div class="col-lg-3 col-md-4 col-xs-12">
                         <div class="form-group">

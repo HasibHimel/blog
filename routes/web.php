@@ -19,9 +19,9 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/welcome', function () {
+    return view('welcome');
+});
 
 Route::get('/', [TemplateController::class, 'index'])->name('home')->middleware('auth');
 Route::get('/aboutus', [TemplateController::class, 'aboutUs'])->name('aboutUs')->middleware('auth');
