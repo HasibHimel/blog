@@ -37624,17 +37624,21 @@ var render = function() {
             _c("div", { staticClass: "col-sm-6 col-xs-12" }, [
               _c("div", { staticClass: "featured-item" }, [
                 _c("div", { staticClass: "thumb" }, [
-                  _vm._m(0, true),
+                  _c("div", { staticClass: "thumb-img" }, [
+                    _c("img", {
+                      attrs: { src: "img/" + post.image_name, alt: "" }
+                    })
+                  ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "overlay-content" }, [
                     _c("strong", { attrs: { title: "Author" } }, [
                       _c("i", { staticClass: "fa fa-user" }),
-                      _vm._v(" " + _vm._s("Ami"))
+                      _vm._v(" " + _vm._s(post.name))
                     ]),
                     _vm._v("     \n                                     "),
                     _c("strong", { attrs: { title: "Posted on" } }, [
                       _c("i", { staticClass: "fa fa-calendar" }),
-                      _vm._v(" " + _vm._s("onek age"))
+                      _vm._v(" " + _vm._s(post.created_at))
                     ]),
                     _vm._v("     \n                                     "),
                     _c("strong", { attrs: { title: "Views" } }, [
@@ -37645,11 +37649,11 @@ var render = function() {
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "down-content" }, [
-                  _c("h4", [_vm._v(_vm._s("valo"))]),
+                  _c("h4", [_vm._v(_vm._s(post.title))]),
                   _vm._v(" "),
-                  _c("p", [_vm._v(_vm._s("onek valo"))]),
+                  _c("p", [_vm._v(_vm._s(post.content))]),
                   _vm._v(" "),
-                  _vm._m(1, true)
+                  _vm._m(0, true)
                 ])
               ])
             ])
@@ -37661,19 +37665,6 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "thumb-img" }, [
-      _c("img", {
-        attrs: {
-          src: "img/1625571241.bayern-munich-bundesliga-title.jpg",
-          alt: ""
-        }
-      })
-    ])
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement

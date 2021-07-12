@@ -6,6 +6,7 @@ use App\Models\Comment;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Symfony\Component\HttpFoundation\Response;
 
 class TemplateController extends Controller
 {
@@ -30,15 +31,17 @@ class TemplateController extends Controller
 
     public function blog(){
         $posts=Post::where([
-            ['approval', 1],
-            ['is_deleted', 0]
-            ])
-        ->join('users', 'users.id', '=', 'posts.user_id')
-        ->select('users.*', 'posts.*')
-        ->orderBy('posts.created_at', 'desc')
-        ->paginate(4);
+                ['approval', 1],
+                ['is_deleted', 0]
+                ])
+            ->join('users', 'users.id', '=', 'posts.user_id')
+            ->select('users.*', 'posts.*')
+            ->orderBy('posts.created_at', 'desc')
+            ->paginate(4)
+        ;
 
-        return view('frontend.blog', ['posts'=>$posts]);
+       
+        return view('frontend.blog', compact('posts'));
     }
 
     public function blogDetails($id){

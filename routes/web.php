@@ -38,6 +38,15 @@ Route::get('/admin-control', [AdminControlController::class, 'index'])->name('ad
 Route::get('/change-status/{user_id}', [AdminControlController::class, 'change'])->name('admin.control.change')->middleware('isAdmin');
 Route::get('/approve-post/{post_id}', [AdminControlController::class, 'approve'])->name('admin.control.approve')->middleware('isAdmin');
 
+//arsha
+
+Route::get('/arsha', function () {
+    return view('arsha.index');
+});
+Route::get('/inner-page', function () {
+    return view('arsha.inner-page');
+});
+
 Auth::routes();
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('dashboard');
 // admin
