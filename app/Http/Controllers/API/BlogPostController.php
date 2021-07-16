@@ -21,7 +21,7 @@ class BlogPostController extends Controller
             ->join('users', 'users.id', '=', 'posts.user_id')
             ->select('users.*', 'posts.*')
             ->orderBy('posts.created_at', 'desc')
-            ->paginate(4)
+            ->paginate(6)
 
         ], Response::HTTP_OK);
         

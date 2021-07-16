@@ -21,6 +21,8 @@ class TemplateController extends Controller
         ->orderBy('posts.created_at', 'desc')
         ->take(3)
         ->get();
+        //return $posts;
+            dd($posts);
         return view('frontend.index', ['posts' => $posts]);
         
     }
